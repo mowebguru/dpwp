@@ -1,0 +1,21 @@
+h1 {
+	background: grey;
+	font-family:Georgia, Times, Serif;
+	font-weight: normal;
+	font-size: 250%;
+	}
+	
+h2 {
+	font-family:"Gill Sans", arial, sans-serif;
+	font-weight: normal;
+	font-size: 90%;
+	}
+	
+h3 {
+	font-family:"Gill Sans", arial, sans-serif;
+	font-weight: normal;
+	font-size: 150%;
+	}
+#credit {
+	font-style:italic;
+	}
