@@ -10,7 +10,7 @@ class Page(object):
         <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{self.title}</title>
+        <title>F&G Beauty Supply</title>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
         <meta charset="UTF-8">
@@ -64,7 +64,6 @@ class Page(object):
                         </div>
                         <div class="navbar-collapse collapse" id="dynamic-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li class="active"><a href="#dynamic-top">Home</a></li>
                                 <li><a href="?hair=brazilian">Brazilian</a></li>
                                 <li><a href="?hair=indian">Indian</a></li>
                                 <li><a href="?hair=peruvian">Peruvian</a></li>
@@ -124,7 +123,7 @@ class Page(object):
                 <div class="row">
                     <div class="dynamic-line-header">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left"/><span>Our Products</span>
+                            <hr class="team_hr team_hr_left"/><span>SHINE YOUR BEAUTY WITH THIS PRODUCT BELOW:</span>
                        '''
         self.close = '''
                         </div>
@@ -136,7 +135,7 @@ class Page(object):
                 <div class="clearfix"> </div>
 
             </div>
-        </div><!-- /.dynamic-team -->
+        </div><!-- /.section before the content -->
 
                 </div>
 
@@ -161,10 +160,9 @@ class Page(object):
         <script src="js/stickUp.min.js"  type="text/javascript"></script>
         <script src="js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
         <script src="js/dynamic_script.js"  type="text/javascript"></script>
-		<!-- dynamic 395 urbanic -->
     </body>
 </html>'''
-
+        # prints the page class content without the content
         def print_page(self):
             allPages = self.head + self.body + self.close
             allPages = allPages.format(**locals())
@@ -178,40 +176,44 @@ class ContentPage(Page):
             <table id="product-attribute-specs-table" class="table table-bordered table-responsive" style="width: 869px; height: 386px;">
 <tbody>
     <tr><th style="text-align: left;">CATEGORY:</th>
-<td class="data" style="text-align: left;"><strong><span>{}</span></strong></td>
+<td class="data" style="text-align: left;"><strong><span>{0}</span></strong></td>
 </tr
-    <tr><th style="text-align: left;">Sample</th>
-    <td class="data" style="text-align: center;"><span><img src="{}" alt="{}" height="350" width="380"></span></td>
+<tr><th style="text-align: left;">LOYALTY DISCOUNT:</th>
+<td class="data" style="text-align: left;"><strong><span>{1}</span></strong></td>
+</tr
+    <tr><th style="text-align: left;">Sample Hair:</th>
+    <td class="data" style="text-align: center;"><span><img src="{2}" alt="" height="350" width="380"></span></td>
     </tr>
 <tr><th style="text-align: left;">Price:</th>
-<td class="data" style="text-align: left;"><span>{}</span></td>
+<td class="data" style="text-align: left;"><span>{3}</span></td>
 </tr
 <tr><th style="text-align: left;">Hair Color:</th>
-<td class="data" style="text-align: left;"><span>{}</span></td>
+<td class="data" style="text-align: left;"><span>{4}</span></td>
 </tr>
 <tr><th style="text-align: left;">Hair Length:</th>
-<td class="data" style="text-align: left;"><span>{}</span></td>
+<td class="data" style="text-align: left;"><span>{5}</span></td>
 </tr>
 <tr><th style="text-align: left;">Texture:</th>
-<td class="data" style="text-align: left;"><span>{}</span></td>
+<td class="data" style="text-align: left;"><span>{6}</span></td>
 </tr>
 <tr><th style="text-align: left;">Hair Weight:</th>
-<td class="data" style="text-align: left;"><span>{}</span></td>
+<td class="data" style="text-align: left;"><span>{7}</span></td>
 </tr>
 <tr><th style="text-align: left;">Quality:</th>
-<td class="data" style="text-align: left;"><span>{}</span></td>
+<td class="data" style="text-align: left;"><span>{8}</span></td>
 </tr>
 <tr><th style="text-align: left;"><span><span>Description:</span></th>
-<td class="data" style="text-align: left;">{}</td>
+<td class="data" style="text-align: left;">{9}</td>
 </tr>
 </tbody>
 </table>'''
+    # prints PageContent with populated data from HumanHair class
+    def print_Content(self, name, discount, image, price, color, length, texture, weight, quality, description):
+        allcontent = self.content
+        allcontent = allcontent.format(name, discount, image, price, color,length, texture, weight, quality, description)
+        return self.head + self.body + allcontent + self.close
 
-    def print_Content(self, name, image,price,color,length,texture,weight,quality,description):
-        allcontent = self.head + self.body + self.content + self.close
-        allcontent = allcontent.format(name, image,price,color,length,texture,weight,quality,description)
-        return allcontent
-
+    # prints the default page without the content to be populated from the HumanHair class which overwrites the print_page from page
 
     def print_Page(self):
         allPages = self.head + self.body + self.close

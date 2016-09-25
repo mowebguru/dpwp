@@ -53,6 +53,7 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         peruvian.description = 'Peruvian human hair is regarded as the finest elite quality human hair. It is stronger' \
                              ', healthier and less likely to tangle than the ordinary human'
 
+        # african human hair instance
         malaysian = Hair()
         malaysian.image = 'images/malaysian.png'
         malaysian.name = 'Virgin Malaysian Human Hair'
@@ -65,6 +66,7 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         malaysian.description = 'Malaysian human hair is regarded as the finest elite quality human hair. It is stronger' \
                              ', healthier and less likely to tangle than the ordinary human'
 
+        # african human hair instance
         african = Hair()
         african.image = 'images/african.png'
         african.name = 'Virgin Afrian Human Hair'
@@ -77,4 +79,5 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         african.description = 'African human hair is regarded as the finest elite quality human hair. It is stronger' \
                              ', healthier and less likely to tangle than the ordinary human'
 
-        self.hair_data = [brazilian, indian, peruvian, malaysian, african] # this array holds all the human hair instances to be used in Mainhandler
+        self.hair_Category = [brazilian, indian, peruvian, malaysian, african] # this array holds all the human hair instances to be used in Mainhandler
+

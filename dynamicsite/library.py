@@ -24,6 +24,30 @@ class Loyal(object):
 
 
     # holds the loans application info into memory
-    def add_Loyalty(self, name, image,price,color,length,texture,weight,quality,description):
-        """apply 'name' : got a loan for x amount @ x rate for @ x term"""
-        self.loyalty.append([name, image,price,color,length,texture,weight,quality,description])
+    def add_Loyalty(self, name,mydiscount, image,price,color,length,texture,weight,quality,description):
+        """add_Loyalty 'x human hair' : got discount with sample, price, color, length, texture, weight, quality, description"""
+        self.loyalty.append([name,mydiscount, image,price,color,length,texture,weight,quality,description])
+
+    # determines loyalty discount for customers
+    def loyal_Discout(self, hair):
+        discount = "0%"
+        # if hair is brazilian, 15% discount on total sales
+        if hair == 'brazilian':
+            discount = "15%"
+
+        # if hair is indian, 10% discount on total sales
+        elif hair == 'indian':
+            discount = "10%"
+
+        # if hair is peruvian, 20% discount on total sales
+        elif hair == 'peruvian':
+            discount = "20%"
+
+        # if hair is malaysian, 5% discount on total sales
+        elif hair == 'malaysian':
+            discount = "5%"
+
+        # if hair is africa , 15% discount on total sales
+        elif hair == 'african':
+            discount = "15%"
+        return discount
