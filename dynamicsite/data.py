@@ -6,6 +6,7 @@
 class Hair(object): # the data class the will be used as template for all the hair categories
     def __init__(self):
         self.image = ''
+        self.name = ''
         self.price = ''
         self.color = ''
         self.length = ''
@@ -17,9 +18,9 @@ class Hair(object): # the data class the will be used as template for all the ha
 class HumanHair(object): # the HumanHair objects created from the Hair class
     def __init__(self):
         brazilian = Hair()
-        brazilian.name = 'Virgin Brazalian Human Hair'
-        brazilian.price = '$90.00'
         brazilian.image = 'images/brazilian.png'
+        brazilian.name = 'Virgin Brazilian Human Hair'
+        brazilian.price = '$90.00'
         brazilian.color = 'Natural Black'
         brazilian.length = '8-30 INCH'
         brazilian.texture = 'Brazilian Body Wave'
@@ -29,9 +30,9 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
                                 'shine and movement that is not easily duplicated.'
 
         indian = Hair()
+        indian.image = 'images/indian.png'
         indian.name = 'Virgin Indian Human Hair'
         indian.price = '$75.00'
-        indian.image = 'images/indian.png'
         indian.color = 'Natural Black'
         indian.length = '8-30 INCH'
         indian.texture = 'Indian Body Wave'
@@ -41,9 +42,9 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
                              ', healthier and less likely to tangle than the ordinary human'
 
         peruvian = Hair()
+        peruvian.image = 'images/peruvian.png'
         peruvian.name = 'Virgin Peruvian Human Hair'
         peruvian.price = '$65.00'
-        peruvian.image = 'images/peruvian.png'
         peruvian.color = 'Natural Black'
         peruvian.length = '8-30 INCH'
         peruvian.texture = 'Straight Hair'
@@ -53,9 +54,9 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
                              ', healthier and less likely to tangle than the ordinary human'
 
         malaysian = Hair()
+        malaysian.image = 'images/malaysian.png'
         malaysian.name = 'Virgin Malaysian Human Hair'
         malaysian.price = '$80.00'
-        malaysian.image = 'images/malaysian.png'
         malaysian.color = 'T1B/4/27'
         malaysian.length = '16-26 INCH'
         malaysian.texture = 'Ombre Straight Hair'
@@ -65,9 +66,9 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
                              ', healthier and less likely to tangle than the ordinary human'
 
         african = Hair()
+        african.image = 'images/african.png'
         african.name = 'Virgin Afrian Human Hair'
         african.price = '$88.00'
-        african.image = 'images/african.png'
         african.color = 'Natural Black'
         african.length = '16-26 INCH'
         african.texture = 'Straight Hair'

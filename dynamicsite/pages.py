@@ -65,11 +65,11 @@ class Page(object):
                         <div class="navbar-collapse collapse" id="dynamic-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
                                 <li class="active"><a href="#dynamic-top">Home</a></li>
-                                <li><a href="#dynamic-about">Brazilian</a></li>
-                                <li><a href="#dynamic-portfolio">Indian</a></li>
-                                <li><a href="#dynamic-portfolio">Peruvian</a></li>
-                                <li><a href="#dynamic-portfolio">Malaysian</a></li>
-                                <li><a href="#dynamic-portfolio">African</a></li>
+                                <li><a href="?hair=brazilian">Brazilian</a></li>
+                                <li><a href="?hair=indian">Indian</a></li>
+                                <li><a href="?hair=peruvian">Peruvian</a></li>
+                                <li><a href="?hair=malaysian">Malaysian</a></li>
+                                <li><a href="?hair=african">African</a></li>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div><!--/.container-fluid -->
@@ -165,6 +165,11 @@ class Page(object):
     </body>
 </html>'''
 
+        def print_page(self):
+            allPages = self.head + self.body + self.close
+            allPages = allPages.format(**locals())
+            return allPages
+
 class ContentPage(Page):
     def __init__(self):
         #   constructor function for the super class
@@ -202,5 +207,14 @@ class ContentPage(Page):
 </tbody>
 </table>'''
 
-        def print_Content(self, ):
+    def print_Content(self, name, image,price,color,length,texture,weight,quality,description):
+        allcontent = self.head + self.body + self.content + self.close
+        allcontent = allcontent.format(name, image,price,color,length,texture,weight,quality,description)
+        return allcontent
+
+
+    def print_Page(self):
+        allPages = self.head + self.body + self.close
+        allPages = allPages.format(**locals())
+        return allPages
 
