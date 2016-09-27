@@ -87,8 +87,7 @@ class MainHandler(webapp2.RequestHandler):
                         description = myHair.hair_Category[4].description
                         myLoyalty = l.add_Loyalty(name,mydiscount, image,price,color,length,texture,weight,quality,description)
                         self.response.write(myPage.print_Content(name,mydiscount, image,price,color,length,texture,weight,quality,description))
-                else:
-                    hair == ''
+                elif hair == 'home':
                     self.response.write(myPage.print_Page())
             else:
                 self.response.write(myPage.print_Page())

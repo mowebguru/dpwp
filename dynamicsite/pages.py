@@ -64,6 +64,7 @@ class Page(object):
                         </div>
                         <div class="navbar-collapse collapse" id="dynamic-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
+                                <li class="active"><a href="?hair=home">Home</a></li>
                                 <li><a href="?hair=brazilian">Brazilian</a></li>
                                 <li><a href="?hair=indian">Indian</a></li>
                                 <li><a href="?hair=peruvian">Peruvian</a></li>
@@ -118,12 +119,7 @@ class Page(object):
             </div><!-- /#dynamic-carousel -->
         </div>
 
-        <div class="dynamic-team" id="dynamic-about">
-            <div class="container">
-                <div class="row">
-                    <div class="dynamic-line-header">
-                        <div class="text-center">
-                            <hr class="team_hr team_hr_left"/><span>SHINE YOUR BEAUTY WITH THIS PRODUCT BELOW:</span>
+
                        '''
         self.close = '''
                         </div>
@@ -172,7 +168,12 @@ class ContentPage(Page):
     def __init__(self):
         #   constructor function for the super class
         super(ContentPage,self).__init__()
-        self.content = '''
+        self.content = '''<div class="dynamic-team" id="dynamic-about">
+            <div class="container">
+                <div class="row">
+                    <div class="dynamic-line-header">
+                        <div class="text-center">
+                            <hr class="team_hr team_hr_left"/><span>SHINE YOUR BEAUTY WITH THIS PRODUCT BELOW:</span>
             <table id="product-attribute-specs-table" class="table table-bordered table-responsive" style="width: 869px; height: 386px;">
 <tbody>
     <tr><th style="text-align: left;">CATEGORY:</th>
