@@ -3,6 +3,7 @@
    File   : Week 4 - Dynamic Site
    Date   :Sept. 23, 2016'''
 
+# creates the page class as frame for the contentpage
 class Page(object):
     def __init__(self):
         self.title = "F&G Beauty Supply"
@@ -164,6 +165,7 @@ class Page(object):
             allPages = allPages.format(**locals())
             return allPages
 
+# Creates the child page that inherits from the page class
 class ContentPage(Page):
     def __init__(self):
         #   constructor function for the super class
@@ -215,7 +217,6 @@ class ContentPage(Page):
         return self.head + self.body + allcontent + self.close
 
     # prints the default page without the content to be populated from the HumanHair class which overwrites the print_page from page
-
     def print_Page(self):
         allPages = self.head + self.body + self.close
         allPages = allPages.format(**locals())

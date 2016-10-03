@@ -3,20 +3,27 @@
    File   : Week 4 - Dynamic Site
    Date   :Sept. 23, 2016'''
 
-class Hair(object): # the data class the will be used as template for all the hair categories
-    def __init__(self):
-        self.image = ''
-        self.name = ''
-        self.price = ''
-        self.color = ''
-        self.length = ''
-        self.texture = ''
-        self.weight = ''
-        self.quality = ''
-        self.description = ''
+# the code below serves two functions: 1) create the Hair (DataObject) class that will be used to create instances of
+# other hair categories and 2) populate the ContentPage with dynamic information as a user client on the associated options
 
-class HumanHair(object): # the HumanHair objects created from the Hair class
+# defines the Hair (DataObject) with all attributes
+class Hair(object):
     def __init__(self):
+        self.image = ''      # defines the sample picture of the hair
+        self.name = ''       # defines the name of the hair
+        self.price = ''      # defines the price of the hair
+        self.color = ''      # defines the color of the hair
+        self.length = ''     # defines the length of the hair
+        self.texture = ''    # defines the texture of the hair
+        self.weight = ''     # defines the weight of the hair
+        self.quality = ''    # defines the quality of the hair
+        self.description = '' # defines the description of the hair
+
+# the HumanHair is an instance of the Hair class that serves as data store for the application
+class HumanHair(object):
+    def __init__(self):
+
+         # creates the Brazilian human hair instance to be populated on contentpage
         brazilian = Hair()
         brazilian.image = 'images/brazilian.png'
         brazilian.name = 'Virgin Brazilian Human Hair'
@@ -29,6 +36,7 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         brazilian.description = 'Brazilian Human Hair offers the most natural look and feel. It is remarkably soft with a ' \
                                 'shine and movement that is not easily duplicated.'
 
+        # creates the Indian human hair instance to be populated on contentpage
         indian = Hair()
         indian.image = 'images/indian.png'
         indian.name = 'Virgin Indian Human Hair'
@@ -41,6 +49,7 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         indian.description = 'Indian human hair is regarded as the finest elite quality human hair. It is stronger' \
                              ', healthier and less likely to tangle than the ordinary human'
 
+        # creates the Peruvian human hair instance to be populated on contentpage
         peruvian = Hair()
         peruvian.image = 'images/peruvian.png'
         peruvian.name = 'Virgin Peruvian Human Hair'
@@ -53,7 +62,7 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         peruvian.description = 'Peruvian human hair is regarded as the finest elite quality human hair. It is stronger' \
                              ', healthier and less likely to tangle than the ordinary human'
 
-        # african human hair instance
+        # creates the Malaysian human hair instance to be populated on contentpage
         malaysian = Hair()
         malaysian.image = 'images/malaysian.png'
         malaysian.name = 'Virgin Malaysian Human Hair'
@@ -66,7 +75,7 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         malaysian.description = 'Malaysian human hair is regarded as the finest elite quality human hair. It is stronger' \
                              ', healthier and less likely to tangle than the ordinary human'
 
-        # african human hair instance
+        # create the African human hair instance to be populated on contentpage
         african = Hair()
         african.image = 'images/african.png'
         african.name = 'Virgin Afrian Human Hair'
@@ -79,5 +88,5 @@ class HumanHair(object): # the HumanHair objects created from the Hair class
         african.description = 'African human hair is regarded as the finest elite quality human hair. It is stronger' \
                              ', healthier and less likely to tangle than the ordinary human'
 
-        self.hair_Category = [brazilian, indian, peruvian, malaysian, african] # this array holds all the human hair instances to be used in Mainhandler
-
+        # this array holds all the human hair instances to be used in Mainhandler
+        self.hair_Category = [brazilian, indian, peruvian, malaysian, african]
